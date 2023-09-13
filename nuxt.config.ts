@@ -10,11 +10,18 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    public: {
+      API_BASE_URL: process.env.API_BASE_URL,
+      Todos_URL: process.env.Todos_URL,
+    },
+  },
   nitro: {
     devProxy: {
-      '/api/todos': { 
-        target: "https://port-0-todo-api-f02w2almhfuepj.sel5.cloudtype.app", 
-        changeOrigin: true 
+      '/api/todos/': { 
+        target: "https://port-0-todo-api-f02w2almhfuepj.sel5.cloudtype.app/", 
+        changeOrigin: true,
+        secure: false 
       }
     },
   },
