@@ -25,6 +25,9 @@ export default defineNuxtConfig({
       }
     },
   },
+  routeRules: {
+    '/api/todos/': { proxy: 'https://port-0-todo-api-f02w2almhfuepj.sel5.cloudtype.app/', cors: true}
+  },
   app: {
     head: {
       htmlAttrs: {
