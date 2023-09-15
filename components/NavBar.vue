@@ -39,6 +39,7 @@ h1 {
   text-transform: uppercase;
   flex: 1;
   color: white;
+  text-align: center;
   letter-spacing: 12px;
   font-size: 1.5rem;
 }
